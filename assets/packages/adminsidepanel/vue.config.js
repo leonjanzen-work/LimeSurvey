@@ -24,6 +24,20 @@ module.exports = {
     },
 
     chainWebpack: config => {
+        config.resolve.alias.set('vue', '@vue/compact');
+        config.module
+            .rule('vue')
+            .use('vue-loader')
+            .tap(options => {
+                return {
+                    options,
+                    compilerOptions: {
+                        compactConfig: {
+                            MODE: 2
+                        }
+                    }
+                }
+            });
         const MiniCSS = require("mini-css-extract-plugin");
 
         if (config.plugins.has("extract-css")) {
