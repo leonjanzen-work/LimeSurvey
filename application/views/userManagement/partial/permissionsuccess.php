@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-12">
                 <ul class="list-group">
                     <?php foreach ($results as $type => $result) { ?>
                         <?php /*<?='<pre>'.print_r([$type,$result],true).'</pre>';?> */ ?>

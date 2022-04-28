@@ -32,17 +32,17 @@ echo viewHelper::getViewTestTag('usersIndex');
     <div class="container-fluid">
         <?=TbHtml::formTb(null, App()->createUrl('admin/usermanagement/sa/importfromjson'), 'post', ["id"=>"UserManagement--importjson"])?>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-12">
                 <textarea rows="10" style="width:100%" name="jsonstring" id="jsonstring"><?=json_encode($result,JSON_PRETTY_PRINT)?></textarea>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-12">
                 <div id="jsonContent" style="max-height:25rem;overflow:scroll;white-space:pre;"><?=json_encode($result,JSON_PRETTY_PRINT)?></div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-12">
                 <input type="submit" class="btn btn-default" name="submit" value="Submit and save" />
             </div>
         </div>
