@@ -30,8 +30,8 @@ Yii::app()->getController()->renderPartial(
         </div>
         
         <?php if(!isset($noButton)): ?>
-        <div class="modal-footer modal-footer-buttons row ls-space margin top-35">
-            <button id="exitForm" class="btn btn-default"><?=gT('Close')?></button>
+        <div class="modal-footer">
+            <button id="exitForm" class="btn btn-outline-secondary"><?=gT('Close')?></button>
         </div>
         <?php endif;?>
     </div>
