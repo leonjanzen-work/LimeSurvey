@@ -10,7 +10,7 @@
 <div class="modal-body">
     <div class="container-center">
         <div class="row">
-            <div class="col-xs-12 text-center">
+            <div class="col-12 text-center">
                 <div class="check_mark">
                     <div class="sa-icon sa-success animate">
                         <span class="sa-line sa-tip animateSuccessTip"></span>

@@ -21,7 +21,7 @@ echo viewHelper::getViewTestTag('usersIndex');
 
 <div class="menubar surveymanagerbar">
     <div class="row container-fluid">
-        <div class="col-xs-12 col-md-12">
+        <div class="col-12 col-md-12">
             <div class="h2"><?php eT("User management panel")?></div>
         </div>
     </div>
