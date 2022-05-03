@@ -30,7 +30,7 @@
             <br/><br/>
             <?php if (!empty($userloop)) { ?>
                 <div class="table-responsive">
-                    <table class='users table table-hover'>
+                    <table class='items table'>
                         <thead>
                         <tr>
                             <th><?php eT("Action"); ?></th>
@@ -85,7 +85,7 @@
                         <td>
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <?php echo CHtml::dropDownList('uid', '-1', $addableUsers, ['class' => "form-control col-lg-4"]); ?>
+                                    <?php echo CHtml::dropDownList('uid', '-1', $addableUsers, ['class' => "form-select col-lg-4"]); ?>
                                     <input name='ugid' type='hidden' value='<?php echo $ugid; ?>'/>
                                 </div>
                                 <div class="col-lg-4">
