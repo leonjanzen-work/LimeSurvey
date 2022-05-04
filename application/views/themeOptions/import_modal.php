@@ -5,6 +5,7 @@
      * @var string          $themeType
      *
      */
+
 ?>
 <div class="modal fade" tabindex="-1" role="dialog" id="<?php echo $importModal;?>">
     <div class="modal-dialog">

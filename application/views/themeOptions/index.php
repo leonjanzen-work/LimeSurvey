@@ -39,16 +39,6 @@ echo viewHelper::getViewTestTag('templateOptions');
                 <?php echo '<h3>' . gT('Installed survey themes:') . '</h3>'; ?>
 
                 <?php $this->renderPartial(
-                        './surveythememenu',
-                        [
-                                'canImport'=>$canImport,
-                            'importErrorMessage'=>$importErrorMessage,
-                            'importModal' => 'importSurveyModal',
-                            'importTemplate' => 'importSurveyTemplate',
-                            'themeType' => 'survey'
-                        ]
-                ); ?>
-                <?php $this->renderPartial(
                         './surveythemelist',
                         array( 'oSurveyTheme'=> $oSurveyTheme, 'pageSize'=>$pageSize)
                 ); ?>
@@ -240,16 +230,6 @@ echo viewHelper::getViewTestTag('templateOptions');
             <div class="col-lg-12 list-surveys">
                 <?php echo '<h3>' . gT('Question themes:') . '</h3>'; ?>
                 <!-- Installed Question Themes -->
-                <?php $this->renderPartial(
-                        './surveythememenu',
-                        [
-                            'canImport' => $canImport,
-                            'importErrorMessage' => $importErrorMessage,
-                            'importModal' => 'importQuestionModal',
-                            'importTemplate' => 'importQuestionTemplate',
-                            'themeType' => 'question'
-                        ]
-                ); ?>
                 <?php $this->renderPartial('./installedthemelist', array('oQuestionTheme' => $oQuestionTheme, 'pageSize' => $pageSize)); ?>
                 <!-- Available Quesiton Themes-->
                 <?php $this->renderPartial('./availablethemelist', array('oQuestionTheme' => $oQuestionTheme, 'pageSize' => $pageSize)); ?>
@@ -258,14 +238,36 @@ echo viewHelper::getViewTestTag('templateOptions');
     </div>
 </div>
 
+<?php $this->renderPartial(
+        './surveythememenu',
+        [
+            'canImport'=>$canImport,
+            'importErrorMessage'=>$importErrorMessage,
+            'importModal' => 'importSurveyModal',
+            'importTemplate' => 'importSurveyTemplate',
+            'themeType' => 'survey'
+        ]
+); ?>
+
+<?php $this->renderPartial(
+        './surveythememenu',
+        [
+            'canImport' => $canImport,
+            'importErrorMessage' => $importErrorMessage,
+            'importModal' => 'importQuestionModal',
+            'importTemplate' => 'importQuestionTemplate',
+            'themeType' => 'question'
+        ]
+); ?>
+
 <script>
     $('#themelist a').click(function (e) {
         var target = $(e.target).attr("href");
         if(target ==="#questionthemes"){
-            $("#uploadandinstall").attr('data-target', '#importQuestionModal');
+            $("#uploadandinstall").attr('data-bs-target', '#importQuestionModal');
         }
         if(target ==="#surveythemes"){
-            $("#uploadandinstall").attr('data-target', '#importSurveyModal');
+            $("#uploadandinstall").attr('data-bs-target', '#importSurveyModal');
         }
     });
 </script>
