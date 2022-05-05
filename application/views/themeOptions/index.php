@@ -239,7 +239,7 @@ echo viewHelper::getViewTestTag('templateOptions');
             'themeType' => 'question'
         ]
 ); ?>
-                <?php $this->renderPartial('./installedthemelist', array('oQuestionTheme' => $oQuestionTheme, 'pageSize' => $pageSize)); ?>
+<?php $this->renderPartial('./installedthemelist', array('oQuestionTheme' => $oQuestionTheme, 'pageSize' => $pageSize)); ?>
 
 <script>
     $('#themelist a').click(function (e) {
