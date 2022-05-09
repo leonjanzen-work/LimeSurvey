@@ -18,7 +18,7 @@ const ConfirmDeleteModal = function (options) {
         gridid = options.gridid || $item.data('grid-id') || '',
         buttonNo = options.buttonNo || $item.data('button-no') || '<i class="fa fa-times"></i>',
         buttonYes = options.buttonYes || $item.data('button-yes') || '<i class="fa fa-check"></i>',
-        buttonType = $item.data('button-type') || 'btn-danger',
+        buttonType = $item.data('button-type') || 'btn-primary',
         parentElement = options.parentElement || $item.data('parent-element') || 'body';
 
     const closeIconHTML = '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
