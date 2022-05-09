@@ -36,7 +36,7 @@ var BootstrapRemoteModal = function(presetOptions, templateOptions){
         innerBlock      = $('<div class="modal-dialog" role="document"></div>'),
         contentBlock    = $('<div class="modal-content"></div>'),
         headerBlock     = $('<div class="modal-header"></div>'),
-        headlineBlock   = $('<h4 class="modal-title"></h4>'),
+        headlineBlock   = $('<h5 class="modal-title"></h5>'),
         bodyBlock       = $('<div class="modal-body"></div>'),
         footerBlock     = $('<div class="modal-footer"></div>'),
         closeIcon       = $(templateOptions.closeIcon),

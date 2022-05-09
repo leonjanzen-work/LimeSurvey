@@ -18,7 +18,7 @@ const ConfirmDeleteModal = function (options) {
         gridid = options.gridid || $item.data('grid-id') || '',
         buttonNo = options.buttonNo || $item.data('button-no') || '<i class="fa fa-times"></i>',
         buttonYes = options.buttonYes || $item.data('button-yes') || '<i class="fa fa-check"></i>',
-        buttonType = $item.data('button-type') || 'btn-primary',
+        buttonType = $item.data('button-type') || 'btn-danger',
         parentElement = options.parentElement || $item.data('parent-element') || 'body';
 
     const closeIconHTML = '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
@@ -31,7 +31,7 @@ const ConfirmDeleteModal = function (options) {
         innerBlock = $('<div class="modal-dialog" role="document"></div>'),
         contentBlock = $('<div class="modal-content"></div>'),
         headerBlock = $('<div class="modal-header"></div>'),
-        headlineBlock = $('<h4 class="modal-title"></h4>'),
+        headlineBlock = $('<h5 class="modal-title"></h5>'),
         bodyBlock = $('<div class="modal-body"></div>'),
         footerBlock = $('<div class="modal-footer"></div>'),
         closeIcon = $(closeIconHTML),
@@ -48,8 +48,8 @@ const ConfirmDeleteModal = function (options) {
             if (confirmTitle !== '') {
                 const thisHeader = headerBlock.clone();
                 headlineBlock.text(confirmTitle);
-                thisHeader.append(closeIcon.clone());
                 thisHeader.append(headlineBlock);
+                thisHeader.append(closeIcon.clone());
                 thisContent.prepend(thisHeader);
             }
 
