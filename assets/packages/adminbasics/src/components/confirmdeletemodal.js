@@ -21,8 +21,8 @@ const ConfirmDeleteModal = function (options) {
         buttonType = $item.data('button-type') || 'btn-primary',
         parentElement = options.parentElement || $item.data('parent-element') || 'body';
 
-    const closeIconHTML = '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>',
-        closeButtonHTML = '<button type="button" class="btn btn-cancel" data-dismiss="modal">' + buttonNo + '</button>',
+    const closeIconHTML = '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
+        closeButtonHTML = '<button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">' + buttonNo + '</button>',
         confirmButtonHTML = '<button type="button" class="btn ' + buttonType + ' selector--button-confirm">' + buttonYes + '</button>';
 
 
