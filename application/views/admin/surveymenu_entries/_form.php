@@ -92,36 +92,50 @@ Yii::app()->getController()->renderPartial(
 		</div>
 
 		<div class="mb-3">
-			<div class="list-group">
-				<label class="list-group-item col-md-6">
-					<div class="col-md-1 text-end"><input type="checkbox" data-value="1" class="checkbox selector__dataOptionModel selector__disable_following" data-priority="6" data-option='["render","link","placeholder"]' /></div>
-					<div class="col-md-10 text-start"><?=gT("Remove link")?></div>
-				</label>
-				<label class="list-group-item col-md-6">
-					<div class="col-md-1 text-end"><input type="checkbox" data-value="1" class="checkbox selector__dataOptionModel selector__disable_following" data-priority="5" data-option='["render","link","external"]' /></div>
-					<div class="col-md-10 text-start"><?=gT("External Link")?></div>
-				</label>
-				<label class="list-group-item col-md-6">
-					<div class="col-md-1 text-end"><input type="checkbox" data-value="1" class="checkbox selector__dataOptionModel" checked="true" data-priority="4" data-option='["render","link","pjax"]' /></div>
-					<div class="col-md-10 text-start"><?=gT("Load with pjax")?></div>
-				</label>
-				<label class="list-group-item col-md-6">
-					<div class="col-md-1 text-end"><input type="checkbox" data-value='["survey", "sid"]' class="checkbox selector__dataOptionModel" data-priority="3" data-option='["render","link","data","surveyid"]' /></div>
-					<div class="col-md-10 text-start"><?=gT("Add SurveyId to link")?></div>
-				</label>
-				<label class="list-group-item col-md-6">
-					<div class="col-md-1 text-end"><input type="checkbox" data-value='["survey", "gsid"]' class="checkbox selector__dataOptionModel" data-priority="3" data-option='["render","link","data","gsid"]' /></div>
-					<div class="col-md-10 text-start"><?=gT("Add survey group ID to link")?></div>
-				</label>
-				<label class="list-group-item col-md-6">
-					<div class="col-md-1 text-end"><input type="checkbox" data-value='["questiongroup", "gid"]' class="checkbox selector__dataOptionModel" data-priority="2" data-option='["render","link","data","gid"]' /></div>
-					<div class="col-md-10 text-start"><?=gT("Add question group ID to link")?></div>
-				</label>
-				<label class="list-group-item col-md-6">
-					<div class="col-md-1 text-end"><input type="checkbox" data-value='["question", "qid"]' class="checkbox selector__dataOptionModel" data-priority="1" data-option='["render","link","data","qid"]' /></div>
-					<div class="col-md-10 text-start"><?=gT("Add question ID to link")?></div>
-				</label>
-			</div>
+			<ul class="list-group">
+				<li class="list-group-item col-md-6">
+                    <div class="form-check">
+                        <input id="remove-link" type="checkbox" data-value="1" class="form-check-input checkbox selector__dataOptionModel selector__disable_following" data-priority="6" data-option='["render","link","placeholder"]' />
+                        <label class="form-check-label" for="remove-link"><?=gT("Remove link")?></label>
+                    </div>
+				</li>
+				<li class="list-group-item col-md-6">
+                    <div class="form-check">
+                        <input id="external-link" type="checkbox" data-value="1" class="form-check-input checkbox selector__dataOptionModel selector__disable_following" data-priority="5" data-option='["render","link","external"]' />
+                        <label class="form-check-label" for="external-link"><?=gT("External Link")?></label>
+                    </div>
+				</li>
+				<li class="list-group-item col-md-6">
+                    <div class="form-check">
+                        <input id="load-with-pjax" type="checkbox" data-value="1" class="form-check-input checkbox selector__dataOptionModel" checked="true" data-priority="4" data-option='["render","link","pjax"]' />
+                        <label class="form-check-label" for="load-with-pjax"><?=gT("Load with pjax")?></label>
+                    </div>
+				</li>
+				<li class="list-group-item col-md-6">
+                    <div class="form-check">
+                        <input id="add-survey-id" type="checkbox" data-value='["survey", "sid"]' class="form-check-input checkbox selector__dataOptionModel" data-priority="3" data-option='["render","link","data","surveyid"]' />
+                        <label class="form-check-label" for="add-survey-id"><?=gT("Add SurveyId to link")?></label>
+                    </div>
+				</li>
+				<li class="list-group-item col-md-6">
+                    <div class="form-check">
+                        <input id="add-survey-group-id" type="checkbox" data-value='["survey", "gsid"]' class="form-check-input checkbox selector__dataOptionModel" data-priority="3" data-option='["render","link","data","gsid"]' />
+                        <label class="form-check-label" for="add-survey-group-id"><?=gT("Add survey group ID to link")?></label>
+                    </div>
+				</li>
+				<li class="list-group-item col-md-6">
+                    <div class="form-check">
+                        <input id="add-question-group-id" type="checkbox" data-value='["questiongroup", "gid"]' class="form-check-input checkbox selector__dataOptionModel" data-priority="2" data-option='["render","link","data","gid"]' />
+                        <label class="form-check-label" for="add-question-group-id"><?=gT("Add question group ID to link")?></label>
+                    </div>
+				</li>
+				<li class="list-group-item col-md-6">
+                    <div class="form-check">
+                        <input id="add-question-id" type="checkbox" data-value='["question", "qid"]' class="form-check-input checkbox selector__dataOptionModel" data-priority="1" data-option='["render","link","data","qid"]' />
+                        <label class="form-check-label" for="add-question-id"><?=gT("Add question ID to link")?></label>
+                    </div>
+				</li>
+			</ul>
 		</div>
 		<div class="row ls-space margin bottom-10">
 			<button class="btn btn-warning pull-right " type="button" data-toggle="collapse" data-bs-target="#collapseAdvancedOptions"><?php eT('Toggle advanced options') ?></button>
