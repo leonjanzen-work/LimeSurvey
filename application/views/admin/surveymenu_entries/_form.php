@@ -138,7 +138,7 @@ Yii::app()->getController()->renderPartial(
 			</ul>
 		</div>
 		<div class="row ls-space margin bottom-10">
-			<button class="btn btn-warning pull-right " type="button" data-toggle="collapse" data-bs-target="#collapseAdvancedOptions"><?php eT('Toggle advanced options') ?></button>
+			<button class="btn btn-warning pull-right " type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvancedOptions"><?php eT('Toggle advanced options') ?></button>
 		</div>
 		<!-- Start collapsed advanced options -->
 		<div class="collapse" id="collapseAdvancedOptions">
@@ -172,7 +172,7 @@ Yii::app()->getController()->renderPartial(
 
             <div class="mb-3">
 				<?php echo $form->labelEx($model, 'user_id'); ?>
-				<?php echo $form->dropDownList($model, 'user_id', $model->getUserIdOptions()); ?>
+				<?php echo $form->dropDownList($model, 'user_id', $model->getUserIdOptions(), ['class' => 'form-select']); ?>
 				<?php echo $form->error($model, 'user_id'); ?>
             </div>
             
