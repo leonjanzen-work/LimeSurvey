@@ -29117,6 +29117,38 @@
     }
   });
 
+  $.fn.extend({
+    bsconfirm: function bsconfirm(text, i18n, cbok, cbcancel) {
+      cbok = cbok || function () {
+        $('#identity__bsconfirmModal').modal('hide');
+      };
+
+      cbcancel = cbcancel || function () {
+        $('#identity__bsconfirmModal').modal('hide');
+      };
+
+      i18n = i18n || {};
+      var modalHtml = $("\n            <div id=\"identity__bsconfirmModal\" class=\"modal fade\">\n                <div class=\"modal-dialog\">\n                    <div class=\"modal-content\">\n                        <div class=\"modal-header\">\n                            <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\"></button>\n                        </div>\n                        <div class=\"modal-body\">\n                            ".concat(text, "               \n                        </div>\n                        <div class=\"modal-footer\">\n                            <button id=\"identity__bsconfirmModal_button_cancel\" type=\"button\" data-bs-dismiss=\"modal\" class=\"btn btn-default\">\n                                ").concat(i18n.confirm_cancel, "\n                            </button>\n                            <button id=\"identity__bsconfirmModal_button_ok\" type=\"button\" class=\"btn btn-danger\">\n                                ").concat(i18n.confirm_ok, "\n                            </button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        "));
+
+      if ($('body').find('#identity__bsconfirmModal').length == 0) {
+        $('body').append(modalHtml);
+      } else {
+        $('body').find('#identity__bsconfirmModal').remove();
+        $('body').append(modalHtml);
+      }
+
+      var modal = new bootstrap.Modal(document.getElementById('identity__bsconfirmModal'));
+      modal.show();
+      modal.on('hidden.bs.modal', function () {
+        modal.remove();
+      });
+      modal.on('shown.bs.modal', function () {
+        $('#identity__bsconfirmModal_button_ok').on('click', cbok);
+        $('#identity__bsconfirmModal_button_cancel').on('click', cbcancel);
+      });
+    }
+  });
+
   String.prototype.splitCSV = function (sep) {
     for (var foo = this.split(sep = sep || ","), x = foo.length - 1, tl; x >= 0; x--) {
       if (foo[x].replace(/"\s+$/, '"').charAt(foo[x].length - 1) == '"') {
