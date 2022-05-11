@@ -29139,10 +29139,11 @@
 
       var modal = new bootstrap.Modal(document.getElementById('identity__bsconfirmModal'));
       modal.show();
-      modal.on('hidden.bs.modal', function () {
+      var modalElement = document.getElementById('identity__bsconfirmModal');
+      modalElement.addEventListener('hidden.bs.modal', function () {
         modal.remove();
       });
-      modal.on('shown.bs.modal', function () {
+      modalElement.addEventListener('shown.bs.modal', function () {
         $('#identity__bsconfirmModal_button_ok').on('click', cbok);
         $('#identity__bsconfirmModal_button_cancel').on('click', cbcancel);
       });
