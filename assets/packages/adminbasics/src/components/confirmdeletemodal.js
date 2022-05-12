@@ -27,7 +27,7 @@ const ConfirmDeleteModal = function (options) {
 
 
     //Define all the blocks and combine them by jquery methods
-    const outerBlock = $('<div class="modal fade" tabindex="-1" role="dialog"></div>'),
+    const outerBlock = $('<div id="confirm-delete-modal" class="modal fade" tabindex="-1" role="dialog"></div>'),
         innerBlock = $('<div class="modal-dialog" role="document"></div>'),
         contentBlock = $('<div class="modal-content"></div>'),
         headerBlock = $('<div class="modal-header"></div>'),

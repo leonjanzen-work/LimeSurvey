@@ -32,7 +32,7 @@ var BootstrapRemoteModal = function(presetOptions, templateOptions){
     };
 
     //Define all the blocks and combine them by jquery methods
-    var outerBlock      = $('<div class="modal fade" tabindex="-1" role="dialog"></div>'),
+    var outerBlock      = $('<div id="bootstrap-remote-modal" class="modal fade" tabindex="-1" role="dialog"></div>'),
         innerBlock      = $('<div class="modal-dialog" role="document"></div>'),
         contentBlock    = $('<div class="modal-content"></div>'),
         headerBlock     = $('<div class="modal-header"></div>'),
@@ -89,8 +89,8 @@ var BootstrapRemoteModal = function(presetOptions, templateOptions){
         if(options.header === true){
             var thisHeader = headerBlock.clone();
             headlineBlock.text(options.modalTitle);
-            thisHeader.append(closeIcon.clone());
             thisHeader.append(headlineBlock);
+            thisHeader.append(closeIcon.clone());
             thisContent.prepend(thisHeader);   
         }
         if(options.footer === true){

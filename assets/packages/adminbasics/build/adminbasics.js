@@ -29194,7 +29194,7 @@
       saveButton: templateOptions.saveButton || '<button type="button" class="btn btn-primary">Save changes</button>'
     }); //Define all the blocks and combine them by jquery methods
 
-    var outerBlock = $('<div class="modal fade" tabindex="-1" role="dialog"></div>'),
+    var outerBlock = $('<div id="bootstrap-remote-modal" class="modal fade" tabindex="-1" role="dialog"></div>'),
         innerBlock = $('<div class="modal-dialog" role="document"></div>'),
         contentBlock = $('<div class="modal-content"></div>'),
         headerBlock = $('<div class="modal-header"></div>'),
@@ -29254,8 +29254,8 @@
       if (options.header === true) {
         var thisHeader = headerBlock.clone();
         headlineBlock.text(options.modalTitle);
-        thisHeader.append(closeIcon.clone());
         thisHeader.append(headlineBlock);
+        thisHeader.append(closeIcon.clone());
         thisContent.prepend(thisHeader);
       }
 
@@ -32897,7 +32897,7 @@
         closeButtonHTML = '<button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">' + buttonNo + '</button>',
         confirmButtonHTML = '<button type="button" class="btn ' + buttonType + ' selector--button-confirm">' + buttonYes + '</button>'; //Define all the blocks and combine them by jquery methods
 
-    var outerBlock = $('<div class="modal fade" tabindex="-1" role="dialog"></div>'),
+    var outerBlock = $('<div id="confirm-delete-modal" class="modal fade" tabindex="-1" role="dialog"></div>'),
         innerBlock = $('<div class="modal-dialog" role="document"></div>'),
         contentBlock = $('<div class="modal-content"></div>'),
         headerBlock = $('<div class="modal-header"></div>'),
