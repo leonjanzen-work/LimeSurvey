@@ -16,7 +16,7 @@
             <div class="modal-body">
                 <!-- Scope, Total, Group -->
                 <div class='row'>
-                    <div class='form-group col-12'>
+                    <div class='mb-3 col-12'>
                         <label class='form-label col-md-2'>
                             <?php eT("Scope:"); ?>
                         </label>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <!-- Question group -->
-                    <div class='form-group col-12'>
+                    <div class='mb-3 col-12'>
                         <label class='form-label col-md-2' for='gid'>
                             <?php eT("Question group:"); ?>
                         </label>
@@ -58,7 +58,7 @@
                 </div>
                 <div class='row'>
                     <!-- Minimum -->
-                    <div class='form-group col-12'>
+                    <div class='mb-3 col-12'>
                         <label class='form-label col-md-2' for='minimum'>
                             <?php eT("Minimum:"); ?>
                         </label>
@@ -69,7 +69,7 @@
                     </div>
 
                     <!-- Maximum -->
-                    <div class='form-group col-12'>
+                    <div class='mb-3 col-12'>
                         <label class='form-label col-md-2' for='maximum'>
                             <?php eT("Maximum:"); ?>
                         </label>
@@ -111,14 +111,14 @@
                                 $count++;
                             } ?>">
                                 <div class='col-12'></div>
-                                <div class='form-group col-12'>
+                                <div class='mb-3 col-12'>
                                     <label class='form-label col-12' for='name_<?= $assessmentlang ?>'>
                                         <?php eT("Heading"); ?>:</label>
                                     <div class='col-12'>
                                         <input class='form-control' type='text' name='name_<?= $assessmentlang ?>' id='name_<?= $assessmentlang ?>>' size='80' value='<?= $heading ?>'/>
                                     </div>
                                 </div>
-                                <div class='form-group col-12'>
+                                <div class='mb-3 col-12'>
                                     <label class='form-label col-12' for='assessmentmessage_<?= $assessmentlang ?>'>
                                         <?php eT("Message"); ?>:</label>
                                     <div class='col-12'>
@@ -128,7 +128,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class='form-group'>
+                                <div class='mb-3'>
                                     <div class='col-md-2'></div>
                                     <div class='col-md-4'>
                                         <input type='submit' class="btn btn-default d-none" value='<?php eT("Save"); ?>'/>
