@@ -12,7 +12,7 @@
             <!-- Condition -->
             <div class='mb-3 row'>
                 <label class='form-label col-md-2'><?php eT('Scenario'); ?></label>
-                <div class='col-md-2 add-scenario-column'>
+                <div class='col-md-4 add-scenario-column'>
                     <input class='form-control' type='number' name='quick-add-scenario' id='quick-add-scenario' value='1' />
                 </div>
             </div>
