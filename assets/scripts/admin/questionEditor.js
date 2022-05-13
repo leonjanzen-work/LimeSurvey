@@ -776,7 +776,8 @@ $(document).on('ready pjax:scriptcomplete', function () {
     }
 
     $('#labelsets').select2({
-        dropdownParent: $('#labelsetbrowserModal')
+        dropdownParent: $('#labelsetbrowserModal'),
+        theme: 'bootstrap-5'
     });
     $('#labelsetpreview').html('');
     $('#labelsetsSelectorContainer').hide();

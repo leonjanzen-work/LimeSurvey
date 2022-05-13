@@ -103,7 +103,7 @@ class WhSelect2 extends CInputWidget
 
         /* initialize plugin */
         $selector = '#' . TbArray::getValue('id', $this->htmlOptions, $this->getId());
-        $this->pluginOptions['theme']='bootstrap';
+        $this->pluginOptions['theme']='bootstrap-5';
         $this->getApi()->registerPlugin('select2', $selector, $this->pluginOptions, LSYii_ClientScript::POS_POSTSCRIPT);
         $this->getApi()->registerEvents($selector, $this->events, LSYii_ClientScript::POS_POSTSCRIPT);
     }

@@ -30,11 +30,20 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'cb751ae51bdb8fbce284375558aa41ac1c0a3abc',
+    'reference' => '88138c7540e9db94da367564233f182818e8079e',
     'name' => 'limesurvey/limesurvey',
   ),
   'versions' => 
   array (
+    'apalfrey/select2-bootstrap-5-theme' => 
+    array (
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ab448b2ac36a6f7f90b162e384ca2b1469a3cc1f',
+    ),
     'limesurvey/limesurvey' => 
     array (
       'pretty_version' => 'dev-develop',
@@ -42,7 +51,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'cb751ae51bdb8fbce284375558aa41ac1c0a3abc',
+      'reference' => '88138c7540e9db94da367564233f182818e8079e',
     ),
     'paragonie/constant_time_encoding' => 
     array (
