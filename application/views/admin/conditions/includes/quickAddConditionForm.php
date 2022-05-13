@@ -116,7 +116,7 @@
                     </div>
                 </div>
 
-                <div role='tabpanel' class='tab-pane active' id='QUICKADD-CONST'>
+                <div role='tabpanel' class='tab-pane' id='QUICKADD-CONST'>
                     <div class='mb-3 answer-option row'>
                         <div class='col-md-2'></div>
                         <div class='col-md-10'>
@@ -162,7 +162,7 @@
                     </div>
                 </div>
 
-                <div role='tabpanel' class='tab-pane active' id='QUICKADD-REGEXP'>
+                <div role='tabpanel' class='tab-pane' id='QUICKADD-REGEXP'>
                     <div class='mb-3 answer-option row'>
                         <div class='col-md-2'></div>
                         <div class='col-md-10'>
