@@ -44,7 +44,7 @@
 
 <!-- Modal for quick add -->
 <div id="quick-add-condition-modal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <!-- Modal content-->
         <div class="modal-content">  <?php // JS add not.type as panel-type, e.g. panel-default, panel-danger ?>
             <div class="modal-header">
