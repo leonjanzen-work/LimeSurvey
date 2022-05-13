@@ -29141,7 +29141,7 @@
       modal.show();
       var modalElement = document.getElementById('identity__bsconfirmModal');
       modalElement.addEventListener('hidden.bs.modal', function () {
-        modal.remove();
+        modal.dispose();
       });
       modalElement.addEventListener('shown.bs.modal', function () {
         $('#identity__bsconfirmModal_button_ok').on('click', cbok);
