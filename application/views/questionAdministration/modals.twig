@@ -94,14 +94,12 @@
             </div>
 
             <div class="modal-body">
-                <p>
-                    <input type="radio" name="savelabeloption" id="newlabel">
-                    <label for="newlabel">{{ gT('New label set') }}</label>
-                </p>
-                <p>
-                    <input type="radio" name="savelabeloption" id="replacelabel">
-                    <label for="replacelabel">{{ gT('Replace the existing record.') }}
-                </p>
+                <div class="btn-group mb-3">
+                    <input class="btn-check" type="radio" name="savelabeloption" id="newlabel">
+                    <label class="btn btn-outline-primary" for="newlabel">{{ gT('New label set') }}</label>
+                    <input class="btn-check" type="radio" name="savelabeloption" id="replacelabel">
+                    <label class="btn btn-outline-primary" for="replacelabel">{{ gT('Replace the existing record.') }}
+                </div>
             </div>
 
             <div class="modal-footer button-list">
