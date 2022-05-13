@@ -648,29 +648,31 @@ $(document).on('ready pjax:scriptcomplete', function () {
             throw 'abort';
           }
 
-        const $liTemplate = $('<li class="nav-item" role="presentation"></li>');
-        const $aTemplate = $('<a class="nav-link" data-bs-toggle="tab"></a>');
+          const $liTemplate = $('<li class="nav-item" role="presentation"></li>');
+          const $aTemplate = $('<button type="button" role="tab" class="nav-link" data-bs-toggle="tab" data-bs-target=""></button>');
           const $tabTodyTemplate = $('<div></div>');
           const $listTemplate = $('<div class="list-group selector_label-list"></div>');
-          const $listItemTemplate = $('<div class="list-group-item row selector_label-list-row"></div>');
+          const $listItemTemplate = $('<div class="row mb-3 selector_label-list-row"></div>');
           const $tabindex = $('<ul class="nav nav-tabs" role="tablist"></ul>');
-          const $tabbody = $('<div class="tab-content" style="max-height: 50vh; overflow:auto;"></div>');
+          const $tabbody = $('<div class="tab-content" id="label-set-tab-content" style="max-height: 50vh; overflow:auto;"></div>');
 
           $('#labelsetpreview').empty();
 
           let hasInvalidCodes = false;
           let isEmpty = true;
           const source = $('#labelsetbrowserModal').data('source');
-          const i = 0;
+          let i = 0;
           $.each(json.languages, (language, languageName) => {
             const $linkItem = $aTemplate.clone();
             const $bodyItem = $tabTodyTemplate.clone();
             let $itemList = $listTemplate.clone();
 
             const classLink = i === 0 ? 'active' : '';
-          const classBody = i === 0 ? 'tab-pane tab-pane fade show active' : 'tab-page tab-pane fade';
+            const classBody = i === 0 ? 'tab-pane fade show active' : 'tab-pane fade';
+            i++;
 
             $linkItem.addClass(classLink).attr('href', `#language_${language}`).text(languageName);
+            $linkItem.data('bs-target', languageName);
             $liTemplate.clone().append($linkItem).appendTo($tabindex);
 
             $bodyItem.addClass(classBody).attr('id', `language_${language}`);
