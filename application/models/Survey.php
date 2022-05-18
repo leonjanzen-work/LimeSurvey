@@ -481,7 +481,7 @@ class Survey extends LSActiveRecord implements PermissionInterface
             array('faxto', 'length', 'min' => 0, 'max' => 20),
             array('adminemail', 'filter', 'filter' => 'trim'),
             array('bounce_email', 'filter', 'filter' => 'trim'),
-            //array('bounce_email', 'LSYii_EmailIDNAValidator', 'allowEmpty'=>true),
+            
             array('active', 'in', 'range' => array('Y', 'N'), 'allowEmpty' => true),
             array('gsid', 'numerical', 'min' => '0', 'allowEmpty' => true),
             array('anonymized', 'in', 'range' => array('Y', 'N', 'I'), 'allowEmpty' => true),
@@ -1393,6 +1393,7 @@ class Survey extends LSActiveRecord implements PermissionInterface
     /**
      * Returns the title of the survey. Uses the current language and
      * falls back to the surveys' default language if the current language is not available.
+     * @return string
      */
     public function getLocalizedTitle()
     {
