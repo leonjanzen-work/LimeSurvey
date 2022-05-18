@@ -288,7 +288,7 @@ class SurveyAdministrationController extends LSBaseController
     }
 
     /**
-     * Regeerates the question code
+     * Regenerates the question code
      * Automatically renumbers the "question codes" so that they follow
      * a methodical numbering method.
      *
