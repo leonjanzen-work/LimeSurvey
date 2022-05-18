@@ -141,9 +141,6 @@ class SurveyAdministrationController extends LSBaseController
         $aData['surveyid'] = $iSurveyID;
         $aData['sid'] = $iSurveyID; //frontend need this to render topbar for the view
 
-        //NOTE this is set because ONLY this leads to render the view surveySummary_view, no need to use in anymore
-        // $aData['display']['surveysummary'] = true;
-
         // Last survey visited
         $userId = App()->user->getId();
         SettingGlobal::setSetting('last_survey_' . $userId, $iSurveyID);
