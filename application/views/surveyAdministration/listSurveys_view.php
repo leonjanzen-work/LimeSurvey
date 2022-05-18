@@ -12,8 +12,16 @@ echo viewHelper::getViewTestTag('listSurveys');
 ?>
 <div class="container-fluid ls-space list-surveys">
     <ul class="nav nav-tabs" id="surveysystem" role="tablist">
-        <li class="nav-item"><a class="nav-link active" href="#surveys" aria-controls="surveys" role="tab" data-bs-toggle="tab"><?php eT('Survey list'); ?></a></li>
-        <li class="nav-item"><a class="nav-link" href="#surveygroups" aria-controls="surveygroups" role="tab" data-bs-toggle="tab"><?php eT('Survey groups'); ?></a></li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#surveys" aria-controls="surveys" role="tab" data-bs-toggle="tab">
+                <?php eT('Survey list'); ?>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#surveygroups" aria-controls="surveygroups" role="tab" data-bs-toggle="tab">
+                <?php eT('Survey groups'); ?>
+            </a>
+        </li>
     </ul>
     <div class="tab-content">
         <div id="surveys" class="tab-pane show active">
