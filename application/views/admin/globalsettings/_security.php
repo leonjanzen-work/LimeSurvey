@@ -160,52 +160,50 @@
 
         <!-- Brute-force for participant -->
         <div class="col-6">
-            <div class="">
-                <h3><?= gt('Brute-force protection for survey participation') ?></h3>
+            <h3><?= gt('Brute-force protection for survey participation') ?></h3>
 
-                <div class="mb-3">
-                    <label class="form-label" for='tokenIpWhitelist'>
-                        <?php eT("IP whitelist:"); ?>
-                    </label>
-                    <textarea class="form-control" id='tokenIpWhitelist'
-                              name='tokenIpWhitelist'><?php echo htmlspecialchars(Yii::app()->getConfig('tokenIpWhitelist')); ?></textarea>
-                    <span class='hint'>
-                        <?php eT("List of IP addresses to exclude from the maximum token validation attempts check. Separate each IP address with a comma or a new line."); ?>
-                    </span>
-                </div>
+            <div class="mb-3">
+                <label class="form-label" for='tokenIpWhitelist'>
+                    <?php eT("IP whitelist:"); ?>
+                </label>
+                <textarea class="form-control" id='tokenIpWhitelist'
+                          name='tokenIpWhitelist'><?php echo htmlspecialchars(Yii::app()->getConfig('tokenIpWhitelist')); ?></textarea>
+                <span class='hint'>
+                    <?php eT("List of IP addresses to exclude from the maximum token validation attempts check. Separate each IP address with a comma or a new line."); ?>
+                </span>
+            </div>
 
-                <div class="mb-3">
-                    <label class="form-label" for='maxLoginAttemptParticipants'>
-                        <?php eT("Maximum number of attempts:"); ?>
-                    </label>
-                    <div class="">
-                        <input class="form-control" type="number" name="maxLoginAttemptParticipants"
-                               value="<?= Yii::app()->getConfig('maxLoginAttemptParticipants') ?>"/>
-                    </div>
+            <div class="mb-3">
+                <label class="form-label" for='maxLoginAttemptParticipants'>
+                    <?php eT("Maximum number of attempts:"); ?>
+                </label>
+                <div class="">
+                    <input class="form-control" type="number" name="maxLoginAttemptParticipants"
+                           value="<?= Yii::app()->getConfig('maxLoginAttemptParticipants') ?>"/>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label" for='timeOutParticipants'>
-                        <?php eT("Lockout time in seconds (after maximum number of attempts):"); ?>
-                    </label>
-                    <div class="">
-                        <input class="form-control" type="number" name="timeOutParticipants"
-                               value="<?= Yii::app()->getConfig('timeOutParticipants') ?>"/>
-                    </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for='timeOutParticipants'>
+                    <?php eT("Lockout time in seconds (after maximum number of attempts):"); ?>
+                </label>
+                <div class="">
+                    <input class="form-control" type="number" name="timeOutParticipants"
+                           value="<?= Yii::app()->getConfig('timeOutParticipants') ?>"/>
                 </div>
+            </div>
 
-                <div class="mb-3">
-                    <label class="form-label" for='tokenIpWhitelist'>
-                        <?php eT("Reset failed login attempts of participants to make survey accessible again:"); ?>
-                    </label>
-                    <div class="">
-                        <a
-                            class='btn btn-large btn-warning'
-                            type="button"
-                            href='<?= \Yii::app()->createUrl('admin/globalsettings', array("sa" => "resetFailedLoginParticipants")) ?>'
-                        >
-                            <?php eT("Reset participant attempts"); ?>
-                        </a>
-                    </div>
+            <div class="mb-3">
+                <label class="form-label" for='tokenIpWhitelist'>
+                    <?php eT("Reset failed login attempts of participants to make survey accessible again:"); ?>
+                </label>
+                <div class="">
+                    <a
+                        class='btn btn-large btn-warning'
+                        type="button"
+                        href='<?= \Yii::app()->createUrl('admin/globalsettings', array("sa" => "resetFailedLoginParticipants")) ?>'
+                    >
+                        <?php eT("Reset participant attempts"); ?>
+                    </a>
                 </div>
             </div>
         </div>
